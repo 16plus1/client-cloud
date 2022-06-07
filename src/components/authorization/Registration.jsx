@@ -18,7 +18,7 @@ const Registration = () => {
                     <div className='You'>Твое облачное хранилище!</div>
                 </div>
         <div className='authorization'>
-        <div className="authorization__header1">Регистрация!</div>
+        <div className="authorization__header1">Регистрация</div>
         </div>
             <div className="email1">Введите e-mail</div>
             <div className='Inp3'> <Input value={email} setValue={setEmail} type="text" placeholder="Введите email..."/> </div>
