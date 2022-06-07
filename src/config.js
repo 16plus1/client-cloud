@@ -1,1 +1,1 @@
-export const API_URL = `http://burdiipw.beget.tech/`
+export const API_URL = `http://62.113.97.189/`
