@@ -4,7 +4,7 @@ import { API_URL } from "../config";
 
 export const registration = async(email, password, password1) => {
     try {
-        const response = await axios.post(`http://62.113.97.189:8080/registration`, {
+        const response = await axios.post(`http://62.113.97.189:8080/api/auth/registration`, {
             email,
             password,
             password1
@@ -18,7 +18,7 @@ export const registration = async(email, password, password1) => {
 export const login = (email, password) => {
     return async dispatch => {
         try {
-            const response = await axios.post(`http://62.113.97.189:8080/login`, {
+            const response = await axios.post(`http://62.113.97.189:8080/api/auth/login`, {
                 email,
                 password
             })
