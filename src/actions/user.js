@@ -4,7 +4,7 @@ import { API_URL } from "../config";
 
 export const registration = async(email, password, password1) => {
     try {
-        const response = await axios.post(`http://localhost:5000/api/auth/registration`, {
+        const response = await axios.post(`http://62.113.97.189:8080/registration`, {
             email,
             password,
             password1
@@ -18,7 +18,7 @@ export const registration = async(email, password, password1) => {
 export const login = (email, password) => {
     return async dispatch => {
         try {
-            const response = await axios.post(`http://localhost:5000/api/auth/login`, {
+            const response = await axios.post(`http://62.113.97.189:8080/login`, {
                 email,
                 password
             })
@@ -33,7 +33,7 @@ export const login = (email, password) => {
 export const auth = () => {
     return async dispatch => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/auth/auth`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+            const response = await axios.get(`http://62.113.97.189:8080/api/auth/auth`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
             dispatch(setUser(response.data.user))
             localStorage.setItem('token', response.data.token)
         } catch (e) {
